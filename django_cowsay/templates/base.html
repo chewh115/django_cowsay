@@ -1,0 +1,14 @@
+{% load static %}
+<html>
+  <head>
+    <title>Cow Says What?</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Cow Says What?</h1>
+    </header>
+    {% block content %} {% endblock %}
+  </body>
+</html>
