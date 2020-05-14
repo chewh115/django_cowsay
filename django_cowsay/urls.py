@@ -3,5 +3,5 @@ from django_cowsay import views
 
 urlpatterns = [
     path('', views.index, name='homepage'),
-    # path('history/', views.history, name='history')
+    path('history/', views.history, name='history')
 ]

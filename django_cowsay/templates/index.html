@@ -1,3 +1,14 @@
-{% extends 'base.html' %}{%block content%} {% include 'cowsay_form.html' %}
+{% extends "base.html" %} {% block content %}
 <br />
-{%endblock %}
+{% if cow_spoke %}
+<div>{{ cow_spoke }}</div>
+{% endif %}
+<br />
+<form action="" method="POST">
+  {% csrf_token %} {{ form.as_p }}
+  <input type="submit" value="Cow says what?" />
+</form>
+<br />
+<p>See what else the cow has said <a href="{% url 'history' %}">here!</a></p>
+
+{% endblock %}
