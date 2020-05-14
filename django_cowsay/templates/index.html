@@ -1,7 +1,10 @@
 {% extends "base.html" %} {% block content %}
+<header>
+  <h1>Cow Says What?</h1>
+</header>
 <br />
 {% if cow_spoke %}
-<div>{{ cow_spoke }}</div>
+<pre class="cowspoke">{{ cow_spoke }}</pre>
 {% endif %}
 <br />
 <form action="" method="POST">

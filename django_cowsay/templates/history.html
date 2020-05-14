@@ -1,12 +1,9 @@
-<!-- Need:
-     way to get back to home screen to generate more moos
--->
-<h1>The cow has spoken</h1>
+<header>
+  <h1>The cow has spoken</h1>
+</header>
 
 <p><a href="{% url 'homepage' %}">Make it speak more</a></p>
 
-<ol>
-  {% for spoke in most_recent %}
-  <li class="cowspoke">{{spoke}}</li>
-  {% endfor %}
-</ol>
+{% for spoke in most_recent %}
+<pre class="cowspoke">{{spoke}}</pre>
+{% endfor %}
